@@ -231,17 +231,19 @@
                     $('.itemBox').not('.' + value).hide(value)
                     $('.itemBox').filter('.' + value).show(value)
                 }
-                $('.list').click(function () {
-                    $(this).addClass("active").siblings().removeClass("active")
-                })
+                // $('.list').click(function () {
+                //     $(this).addClass("active").siblings().removeClass("active")
+                // })
+                $('.list').removeClass("active");
+                $(this).addClass("active");
             });
         });
-    document.querySelectorAll(".pHover").forEach(function(Element){
-        Element.addEventListener("click",function(){
-            let imgSrc=this.previousElementSibling.getAttribute("src");
-            window.open(imgSrc,"Img","height=auto","width=auto");
+        document.querySelectorAll(".pHover").forEach(function (Element) {
+            Element.addEventListener("click", function () {
+                let imgSrc = this.previousElementSibling.getAttribute("src");
+                window.open(imgSrc, "Img", "height=auto", "width=auto");
+            })
         })
-    })
     </script>
 </body>
 
