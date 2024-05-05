@@ -19,7 +19,7 @@
         </ul>
         <div class="product">
             <div class="itemBox mobile"><img src="./media/mobile.jpg" alt="">
-                <div class="pHover">
+                <div class="pHover" id="firstImg">
                     <p>Buy Now</p>
                 </div>
                 <div class="detail">
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="itemBox camera"><img src="./media/camera 1.jpg" alt="">
-                <div class="pHover">
+                <div class="pHover" id="firstImg">
                     <p>Buy Now</p>
                 </div>
                 <div class="detail">
@@ -235,7 +235,13 @@
                     $(this).addClass("active").siblings().removeClass("active")
                 })
             });
+        });
+    document.querySelectorAll(".pHover").forEach(function(Element){
+        Element.addEventListener("click",function(){
+            let imgSrc=this.previousElementSibling.getAttribute("src");
+            window.open(imgSrc,"Img","height=auto","width=auto");
         })
+    })
     </script>
 </body>
 
