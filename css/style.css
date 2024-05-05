@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+  margin: 40px auto;
+  padding: 40px;
+}
+section ul {
+  display: flex;
+  margin-bottom: 20px;
+}
+section li {
+  background: #eee;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  list-style: none;
+  margin: 8px;
+  font-weight: bold;
+  font-size: 20px;
+}
+section .active {
+  background: #031321;
+  color: white;
+}
+section .product {
+  display: flex;
+  flex-wrap: wrap;
+}
+section .product .itemBox {
+  height: 450px;
+  width: 300px;
+  margin: 4px;
+  position: relative;
+}
+section .product .itemBox img {
+  width: 100%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+section .product .itemBox .detail {
+  position: absolute;
+  bottom: 2%;
+  left: 20px;
+}
+section .product .itemBox .detail button {
+  margin-left: 10px;
+  padding: 4px 10px;
+  background: #031321;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+section .product .itemBox .detail button:hover {
+  background: rgb(15, 255, 15);
+  color: #000;
+  transition: 0.5s ease-in;
+}
+section .product .itemBox .detail .badge {
+  display: inline-block;
+  border: 2px solid rgb(58, 241, 58);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+section .product .itemBox .detail .Price {
+  color: green;
+}
+section .product .itemBox .detail .Price sub {
+  text-decoration: line-through;
+  color: red;
+}
+section .product .itemBox:hover {
+  background: #eee;
+  box-shadow: 10px 10px 20px black;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+::-webkit-scrollbar-thumb ::-webkit-scrollbar-thumb:hover {
+  background: #580000;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    margin: 0;
+  }
+  section ul {
+    display: inline;
+    margin: 0;
+  }
+  section li {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
