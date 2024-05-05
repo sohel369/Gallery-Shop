@@ -39,6 +39,21 @@ section .product .itemBox {
   margin: 4px;
   position: relative;
 }
+section .product .itemBox .pHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 1s ease;
+  background: rgba(75, 250, 0, 0.4078431373);
+  opacity: 0;
+}
+section .product .itemBox .pHover p {
+  font-size: 40px;
+  color: greenyellow;
+  transform: translate(30%, 300%);
+}
 section .product .itemBox img {
   width: 100%;
   height: 60%;
@@ -86,6 +101,9 @@ section .product .itemBox .detail .Price sub {
 section .product .itemBox:hover {
   background: #eee;
   box-shadow: 10px 10px 20px black;
+}
+section .product .itemBox:hover .pHover {
+  opacity: 1;
 }
 
 ::-webkit-scrollbar {
